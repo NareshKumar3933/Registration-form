@@ -70,8 +70,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Check if form has been submitted
         if(isset($_POST['submit'])){
             
-            $sql = "INSERT INTO contactuspage (fullname, email, phoneNo, zipCode, descriptionDetails) VALUES ('$fullName', '$email', '$phoneNo', '$zipCode', '$description')";
-            if ($conn->query($sql) === TRUE) {
+            $query = "INSERT INTO contactuspage (fullname, email, phoneNo, zipCode, descriptionDetails) VALUES ('$fullName', '$email', '$phoneNo', '$zipCode', '$description')";
+            if ($conn->query($query) === TRUE) {
              
                 $mail = new PHPMailer(true);
                 $mail ->isSMTP();

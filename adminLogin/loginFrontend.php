@@ -1,8 +1,5 @@
 <?php require 'login.php';
        
-       //if (isset($_POST['login'])) {
-        
-    //}       
   ?>
 
 <!DOCTYPE html>
@@ -30,7 +27,7 @@
             <div class="input_field">
                 <label>Email</label>
                 <input type="email" name="email" placeholder="Enter Your Email" class="input" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
-                <div class = "span"><?php echo $emailErr; //if(isset($_SESSION['emailErr'])){echo $_SESSION['emailErr']; session_unset(); } ?></div>
+                <div class = "span"><?php echo $emailErr; ?></div>
         
 
             </div>

@@ -44,6 +44,6 @@
 </html>
 <script>
     function deleteconfirmation(){
-        return confirm('Are you sure to detele this entry?');
+        return confirm('Are you sure to delete this entry?');
     }
 </script>

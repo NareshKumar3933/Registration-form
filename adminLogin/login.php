@@ -8,20 +8,19 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $email = $_POST['email'];
     if (empty($email)) {
         $emailErr = "Email is required";
-       //$_SESSION['emailErr'] = $emailErr;
+       
              
     } else {
         $pattern = "/^\S+@\S+\.\S+$/";
 
     if (!preg_match ($pattern, $email) ){  
             $emailErr = "Email is not valid.";
-            //$_SESSION['emailErr'] = $emailErr;
                    
      } else{
             $query = "SELECT * FROM adminloginpage WHERE email='$email' ";
             $result = mysqli_query($conn, $query);
 
-            if (mysqli_num_rows($result) > 0) {
+            if (mysqli_num_rows($result) != 0) {
                 $password = $_POST['password'];
                 if (empty($password)) {
                     $passwordErr = "Password is required";

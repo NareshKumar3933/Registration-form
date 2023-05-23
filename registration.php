@@ -28,11 +28,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     } else{
                             $hashPassword = password_hash($password, PASSWORD_BCRYPT);
                         
-                            $sql = "INSERT INTO adminloginpage( email, password ) VALUES('$email','$hashPassword' )";
-                              if ($conn->query($sql) === TRUE) {
+                            $query = "INSERT INTO adminloginpage( email, password ) VALUES('$email','$hashPassword' )";
+                              if ($conn->query($query) === TRUE) {
                                 echo "<script>
                                 alert('Registered Successfully');
-                                </script>";
+                               </script>";
                               header("Location:/registration-form/adminLogin/loginFrontend.php");
                               exit();
                              }    
@@ -48,3 +48,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 ?>
+
