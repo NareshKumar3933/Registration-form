@@ -26,13 +26,13 @@ require 'registration.php';
                 <label>Email</label>
                 <input type="email" name="email" placeholder="Enter Your Email" class="input" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
             </div>
-            <P><?php echo $emailErr; ?></P>
+            <div class = "span"><?php echo $emailErr; ?></div>
 
             <div class="input_field">
                 <label>Password</label>
                 <input type="password" name="passwordReg" placeholder="Enter Your Password" class="input" value="<?php echo isset($_POST["passwordReg"]) ? $_POST["passwordReg"] : ''; ?>">
             </div>
-            <P><?php echo $passwordErr; ?></P>
+            <div class = "span"><?php echo $passwordErr; ?></div>
                 
             <div class="input_field">
                 <input type="submit" value="Register" name="register" class="form-btn">

@@ -30,14 +30,14 @@
             <div class="input_field">
                 <label>Email</label>
                 <input type="email" name="email" placeholder="Enter Your Email" class="input" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
-                <div><?php  if(isset($_SESSION['emailErr'])){echo $_SESSION['emailErr']; session_unset(); } ?></div>
+                <div class = "span"><?php echo $emailErr; //if(isset($_SESSION['emailErr'])){echo $_SESSION['emailErr']; session_unset(); } ?></div>
         
 
             </div>
 
             <div class="input_field">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Enter Your Password" class="input" value="<?php echo isset($_POST["password"]) ? $_POST["password"] : ''; ?>"><div><?php echo $passwordErr; ?></div>
+                <input type="password" name="password" placeholder="Enter Your Password" class="input" value="<?php echo isset($_POST["password"]) ? $_POST["password"] : ''; ?>"><div class="span"><?php echo $passwordErr; ?></div>
             </div>
                 
             <div class="input_field">

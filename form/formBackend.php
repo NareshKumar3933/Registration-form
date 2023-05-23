@@ -12,9 +12,8 @@ $nameErr = $emailErr =$phoneNoErr=$zipCodeErr=$descriptionErr="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     if(isset($_POST['reset'])){
-        $fullName=$email=$phoneNo=$zipCode=$description= "";
-        $nameErr = $emailErr =$phoneNoErr=$zipCodeErr=$descriptionErr="";
-        
+        $clear = array($_POST['fullname'],$_POST['email'],$_POST['phonenumber'],$_POST['zip_code'],$_POST['description']);
+        reset($clear);
     }
 
     $fullName = $_POST['fullname'];
@@ -47,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $phoneNoErr = "Only numeric value is allowed.";
         }
         if (strlen ($phoneNo) != 11) {  
-            $phoneNoErr = "Mobile no must contain 11 digits.";  
+            $phoneNoErr = "Phone no must contain 11 digits.";  
             }  
     }
     
@@ -101,6 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     }
 
+    
   
 }
 ?>
