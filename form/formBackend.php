@@ -11,11 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 $nameErr = $emailErr =$phoneNoErr=$zipCodeErr=$descriptionErr="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
-    if(isset($_POST['reset'])){
-        $clear = array($_POST['fullname'],$_POST['email'],$_POST['phonenumber'],$_POST['zip_code'],$_POST['description']);
-        reset($clear);
-    }
-
+    
     $fullName = $_POST['fullname'];
     if (empty($fullName)) {
         $nameErr = "Name is required";
@@ -100,7 +96,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     }
 
-    
   
 }
 ?>
