@@ -1,5 +1,5 @@
 <?php
-require 'connectionTo-DB.php';
+require '../dbConnection/connectionTo-DB.php';
 //for email sending
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';

@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     $passwordErr = "Password is required";
                 } else {
                     if(strlen($password)<8){
-                        $passwordErr = "Incorrect Password";       
+                        $passwordErr = "Password Incorrect";       
                     } else {
                         $query = "SELECT * FROM adminloginpage WHERE email='$email' ";
                         $data = mysqli_query($conn, $query);
@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                                 header("Location:/registration-form/formSubmitted/adminAccessFrontend.php");
                                 exit();
                             }else{
-                                $passwordErr = "Password incorrect";
+                                $passwordErr = "Password Incorrect";
                         
                        }
 
