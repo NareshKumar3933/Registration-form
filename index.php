@@ -1,4 +1,4 @@
-<?php require 'registration.php' ?>
+<?php require 'registration.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
